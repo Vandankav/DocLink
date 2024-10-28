@@ -15,7 +15,13 @@ connectCloudinary();
 
 //middlewares
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: [
+    'https://stay-healthy-vert.vercel.app/',
+    'http://localhost:3000'  // for local development
+  ],
+  credentials: true
+}));
 
 //api endpoint
 app.use("/api/admin", adminRouter);
