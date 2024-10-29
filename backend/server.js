@@ -22,6 +22,7 @@ app.use(cors({
   ],
   credentials: true
 }));
+app.options('*', cors()); // Enable pre-flight requests for all routes
 
 //api endpoint
 app.use("/api/admin", adminRouter);
