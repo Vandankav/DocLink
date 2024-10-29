@@ -15,15 +15,7 @@ connectCloudinary();
 
 //middlewares
 app.use(express.json());
-app.use(cors({
-  origin: [
-    'https://stay-healthy-vert.vercel.app/',
-    'http://localhost:3000'  // for local development
-  ],
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  credentials: true
-}));
-app.options('*', cors()); // Enable pre-flight requests for all routes
+app.use(cors());
 
 //api endpoint
 app.use("/api/admin", adminRouter);
