@@ -20,6 +20,7 @@ app.use(cors({
     'https://stay-healthy-vert.vercel.app/',
     'http://localhost:3000'  // for local development
   ],
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
 app.options('*', cors()); // Enable pre-flight requests for all routes
